@@ -105,3 +105,7 @@ Edit this configuration file and uncomment the "apparmor" line: ```/etc/firejail
 Check the application sandboxing : ```firejail --list```
 
 ## Step 7 : Enhance Flatpak application security
+
+> Flatpak applications are the revival of distribution in the Linux world. Here you get your programs from Flathub most of the time and simply install. Although the most famous Flatpaks are well secured, the system of non-unified dependencies and the fact that no maintainer of your distribution has checked the package, can expose you to significant security risks. Add to that the fact that many private companies publish flatpaks directly, you may have serious doubts about the confidentiality of your data.
+
+> I invite you to read a very good article on the subject:["Flatpak - a security nightmare"](https://flatkill.org/)
