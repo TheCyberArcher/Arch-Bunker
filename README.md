@@ -17,4 +17,6 @@
 - Disable automount for data lunks drives
 - Add sudo for your user account and limit the root usage
 
+<br />
+
 I'm only listing things that seem essential here, but you can find information via the [archwiki](https://wiki.archlinux.org/title/Security).
