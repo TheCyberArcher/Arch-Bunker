@@ -91,3 +91,19 @@ Install Firejail on your computer :
 
 ```yay -S firejail```
 
+Add firejail by default for all supported apps : 
+
+```sudo firecfg```
+
+Add the AppArmor support to enforce the security : 
+
+```sudo apparmor_parser -r /etc/apparmor.d/firejail-default```
+```sudo aa-enforce firejail-default```
+
+Edit this configuration file and uncomment the "apparmor" line: 
+
+```/etc/firejail/firejail.config```
+
+Check the application sandboxing : 
+
+```firejail --list```
