@@ -87,13 +87,9 @@ Check the number of enforced configuration files with :
 
 > [Firejail](https://github.com/netblue30/firejail) allows you to sandbox all applications on your system without significantly affecting performance and making it transparent to the end user (Very useful if you download AUR packages or from unverified sources, or proprietary softwares). Often criticized since it uses SUID, I would like to remind you that in desktop use, we want to avoid zero-day vulnerabilities, malware, data uploads and access to your personal files. In no case should a possible privilege escalation really worry you, you gain more by confining your applications than by leaving them as such. If this type of threat is your concern or you are wanted by intelligence, opt for [Qubes OS](https://www.qubes-os.org/) or something else.
 
-Install Firejail on your computer : 
+Install Firejail on your computer : ```yay -S firejail```
 
-```yay -S firejail```
-
-Add firejail by default for all supported apps : 
-
-```sudo firecfg```
+Add firejail by default for all supported apps : ```sudo firecfg```
 
 Add the AppArmor support to enforce the security : 
 
@@ -104,6 +100,4 @@ Edit this configuration file and uncomment the "apparmor" line:
 
 ```/etc/firejail/firejail.config```
 
-Check the application sandboxing : 
-
-```firejail --list```
+Check the application sandboxing : ```firejail --list```
