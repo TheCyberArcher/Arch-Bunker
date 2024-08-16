@@ -38,7 +38,9 @@ Personnaly, i use just the [Zen-Kernel](https://archlinux.org/packages/extra/x86
 
 I much prefer firewalld and we will base it on that case :)
 
-```yay -S firewalld```\
-```systemctl enable firewalld```\
-```systemctl start firewalld```\
-```firewall-cmd --set-default-zone=block```\
+```yay -S firewalld``` (install the firewalld package) \
+```systemctl enable firewalld```(enable the firewalld service at startup) \
+```systemctl start firewalld``` (start the firewalld daemon) \
+```firewall-cmd --set-default-zone=block``` (set the default zone to block)
+
+With these elements, you already have a fairly significant limitation of network flows. The firewalld preconfiguration is very correct, you can improve it by adding rules if necessary.
