@@ -85,5 +85,9 @@ Check the number of enforced configuration files with :
 
 > Firejail is a program that reduces the risk of security breaches by restricting the running environment of untrusted applications using Linux namespaces and seccomp-bpf. It allows a process and all its descendants to have their own private view of the globally shared kernel resources, such as the network stack, process table, mount table.
 
-> Firejail allows you to sandbox all applications on your system without significantly affecting performance and making it transparent to the end user. Often criticized since it uses SUID, I would like to remind you that in desktop use, we want to avoid zero-day vulnerabilities, malware, data uploads and access to your personal files. In no case should a possible privilege escalation really worry you, you gain more by confining your applications than by leaving them as such. If this type of threat is your concern or you are wanted by intelligence, opt for Qubes OS or something else.
+> Firejail allows you to sandbox all applications on your system without significantly affecting performance and making it transparent to the end user (Very useful if you download AUR packages or from unverified sources, or proprietary softwares). Often criticized since it uses SUID, I would like to remind you that in desktop use, we want to avoid zero-day vulnerabilities, malware, data uploads and access to your personal files. In no case should a possible privilege escalation really worry you, you gain more by confining your applications than by leaving them as such. If this type of threat is your concern or you are wanted by intelligence, opt for Qubes OS or something else.
+
+Install Firejail on your computer : 
+
+```yay -S firejail```
 
