@@ -50,3 +50,16 @@ Personnaly, i use just the [Zen-Kernel](https://archlinux.org/packages/extra/x86
 > [AppArmor](https://www.apparmor.net/) use a "Mandatory Access Control" to prevent external or internal threats and zero-day attacks. [Ubuntu](https://ubuntu.com/server/docs/apparmor) has made the choice to implement this security measure for a long time and [Debian](https://wiki.debian.org/AppArmor/HowToUse) has also followed suit. I think it is a good thing to add this layer of security. Thanks to AppArmor, a binary/process will only be limited to what it really needs and will normally not access critical/unnecessary resources.
 
 > Easier to administer than SE Linux, there remains the problem that AppArmor needs a specific profile per binary. A community project ([apparmor.d](https://github.com/roddhjav/apparmor.d)) has been created to add all the common profiles and reinforce them with a few commands.
+
+```yay -S apparmor``` (install the base package of apparmor)
+```cd /boot/loader/entries/``` (go to the concerned directory)
+
+Edit the file corresponding to your kernel loader conf (main, dont modify the fallback configuration file)
+Add this option parameter ```lsm=landlock,lockdown,yama,integrity,apparmor,bpf```
+
+Enable the apparmor service ```sudo systemctl enable apparmor.service
+Reboot your computer and try ```aa-status``` to check if apparmor is running.
+
+
+
+Note : Important: I advise you to install it without activating the hardening, first test a hardening of the applications step by step, if everything works well, we will apply the hardening.
