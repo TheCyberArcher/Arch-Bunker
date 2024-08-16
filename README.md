@@ -71,12 +71,14 @@ Put the configuration file in :
 
 ```/etc/wireguard/```
 
-Enable the interface with ```/sudo wg-quick up "interfacename"```
+Enable the interface with ```sudo wg-quick up "interfacename"```
 
 You can create alias for your bashrc, exemple : 
 
-```alias vpn-up='wg-quick up FR-158'```
+```alias vpn-up='wg-quick up FR-158'```\
 ```alias vpn-down='wg-quick down FR-158'```
+
+Add the command to your startup script or create a .desktop file (if you use a desktop environment)
 
 ## Step 5: Enable Apparmor to protect your system
 
