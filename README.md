@@ -116,3 +116,5 @@ To limit these problems as much as possible, I recommend two things:
 - Install [flatseal](https://github.com/tchx84/Flatseal) to limit apps privileges : ```flatpak install flathub com.github.tchx84.Flatseal```
 
 For each application, limit its rights with flatseal (access to folders, microphone, camera, services) and try to use software approved by the community. With this manipulation and automatic updates, you will limit the risks as much as possible. Otherwise, simply do not use Flatpak.
+
+##  Step 8 : Only use safe and privacy friendly softwares
