@@ -36,11 +36,11 @@ Personnaly, i use just the [Zen-Kernel](https://archlinux.org/packages/extra/x86
 - [Ip tables](https://wiki.archlinux.org/title/Iptables) (Use Netfilter, iptables is also commonly used to refer to this kernel-level firewall)
 - [Firewalld](https://wiki.archlinux.org/title/Firewalld) (Firewalld is a firewall daemon developed by Red Hat. It uses nftables by default)
 
-I much prefer firewalld and we will base it on that case :)
+> I much prefer firewalld and we will base it on that case :)
 
 ```yay -S firewalld``` (install the firewalld package) \
 ```systemctl enable firewalld```(enable the firewalld service at startup) \
 ```systemctl start firewalld``` (start the firewalld daemon) \
 ```firewall-cmd --set-default-zone=block``` (set the default zone to block)
 
-With these elements, you already have a fairly significant limitation of network flows. The firewalld preconfiguration is very correct, you can improve it by adding rules if necessary.
+> With these elements, you already have a fairly significant limitation of network flows. The firewalld preconfiguration is very correct, you can improve it by adding rules if necessary.
