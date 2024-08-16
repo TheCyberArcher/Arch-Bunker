@@ -28,3 +28,17 @@ I'm only listing things that seem essential here, but you can find information v
 > Most of the stuff is critical security additions that weren't accepted into the base kernel by default. This is a good thing, but it can be buggy, but if you want the most secure option possible (which I probably doubt on a daily basis, since your threat model won't be the same for a server) you can install it. 
 
 Personnaly, i use just the [Zen-Kernel](https://archlinux.org/packages/extra/x86_64/linux-zen/) for my daily use.
+
+## Step 3: Chose and configure a robust Firewall
+
+> Implementing a firewall is a basic security measure. Arch comes without any strict measures and seriously, I advise you to install one. You have tons of possibilities, with that you will be able to limit connections and network calls from potentially unwanted / malicious applications. Believe me, those of your internet box are not enough, here we will limit the attack surface by reducing the possibilities of an attack / evasion by the network.
+
+- [Ip tables](https://wiki.archlinux.org/title/Iptables) (Use Netfilter, iptables is also commonly used to refer to this kernel-level firewall)
+- [Firewalld](https://wiki.archlinux.org/title/Firewalld) (Firewalld is a firewall daemon developed by Red Hat. It uses nftables by default)
+
+I much prefer firewalld and we will base it on that case :)
+
+```yay -S firewalld```
+```systemctl enable firewalld```
+```systemctl start firewalld```
+```firewall-cmd --set-default-zone=block```
