@@ -64,7 +64,7 @@ Enable the apparmor service ```sudo systemctl enable apparmor.service```
 
 Reboot your computer and try if apparmor is running : 
 
-```aa-status``` 
+```sudo aa-status``` 
 
 Install the package [apparmor.d-git](https://aur.archlinux.org/packages/apparmor.d-git) for the desktop hardening :
 
@@ -74,11 +74,11 @@ Note : Important: I advise you to install it without activating the hardening, f
 
 If you dont have bugs, enforce the configuration files : 
 
-```aa-enforce /etc/apparmor.d/*```
+```sudo aa-enforce /etc/apparmor.d/*```
 
 Check the number of enforced configuration files with : 
 
-```aa-status | grep -i enforce```
+```sudo aa-status | grep -i enforce```
 
 
 ## Step 4: Application Sandboxing with Firejail
