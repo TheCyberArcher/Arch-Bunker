@@ -54,7 +54,7 @@ Personnaly, i use just the [Zen-Kernel](https://archlinux.org/packages/extra/x86
 
 If you use networkmanager : 
 
-```nmcli con mod "Connexion filaire 1" ipv4.ignore-auto-dns yes```
+```nmcli con mod "Connexion filaire 1" ipv4.ignore-auto-dns yes```\
 ```nmcli con mod "Connexion filaire 1" ipv4.dns "45.90.28.250 45.90.30.250 9.9.9.9 149.112.112.112 1.1.1.1"```
 
 For the VPN : 
