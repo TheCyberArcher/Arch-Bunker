@@ -47,7 +47,36 @@ Personnaly, i use just the [Zen-Kernel](https://archlinux.org/packages/extra/x86
 
 ## Step 4 : Use custom network parameters with a VPN
 
+> I want to tell you, the ideal is to use your own self-hosted services. Unfortunately, not everyone can necessarily have a DNS at home or a VPN server. Here I will show you how to add some elements to your network configuration to improve your security on the web, you can replace the values ​​with your custom fields if you wish.
 
+- Replace the default DNS by another [privacy-friendly](https://www.privacytools.io/encrypted-dns) and secure service.
+- Add a [VPN](https://en.wikipedia.org/wiki/Virtual_private_network) configuration with automatic connection at startup.
+
+If you use networkmanager : 
+
+```nmcli con mod "Connexion filaire 1" ipv4.ignore-auto-dns yes```
+```nmcli con mod "Connexion filaire 1" ipv4.dns "45.90.28.250 45.90.30.250 9.9.9.9 149.112.112.112 1.1.1.1"```
+
+For the VPN : 
+
+```yay -S wireguard-tools```
+
+Download the [configuration file](https://protonvpn.com/support/wireguard-configurations/) (related to your provider)
+
+More information in the [archwiki](https://wiki.archlinux.org/title/WireGuard).
+
+> On this case, i use protonVPN with securecore and netshield (for malware and trackers blocking)
+
+Put the configuration file in : 
+
+```/etc/wireguard/```
+
+Enable the interface with ```/sudo wg-quick up "interfacename"```
+
+You can create alias for your bashrc, exemple : 
+
+```alias vpn-up='wg-quick up FR-158'```
+```alias vpn-down='wg-quick down FR-158'```
 
 ## Step 5: Enable Apparmor to protect your system
 
