@@ -58,8 +58,9 @@ Edit the file corresponding to your kernel loader conf (main, dont modify the fa
 Add this option parameter ```lsm=landlock,lockdown,yama,integrity,apparmor,bpf```
 
 Enable the apparmor service ```sudo systemctl enable apparmor.service
-Reboot your computer and try ```aa-status``` to check if apparmor is running.
 
+Reboot your computer and try if apparmor is running : 
 
+```aa-status``` 
 
 Note : Important: I advise you to install it without activating the hardening, first test a hardening of the applications step by step, if everything works well, we will apply the hardening.
