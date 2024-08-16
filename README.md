@@ -80,3 +80,6 @@ Check the number of enforced configuration files with :
 
 ```aa-status | grep -i enforce```
 
+
+## Step 4: Application Sandboxing with Firejail
+
