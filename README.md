@@ -58,10 +58,11 @@ Edit the file corresponding to your kernel loader conf (main, dont modify the fa
 
 Add this option parameter ```lsm=landlock,lockdown,yama,integrity,apparmor,bpf```
 
-Enable the apparmor service ```sudo systemctl enable apparmor.service
+<br />
+
+Enable the apparmor service ```sudo systemctl enable apparmor.service```
 
 Reboot your computer and try if apparmor is running : 
-
 
 ```aa-status``` 
 
