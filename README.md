@@ -54,7 +54,7 @@ Personnaly, i use just the [Zen-Kernel](https://archlinux.org/packages/extra/x86
 ```yay -S apparmor``` (install the base package of apparmor)
 ```cd /boot/loader/entries/``` (go to the concerned directory)
 
-Edit the file corresponding to your kernel loader conf (main, dont modify the fallback configuration file)\
+Edit the file corresponding to your kernel loader conf (main, dont modify the fallback configuration file)
 
 Add this option parameter ```lsm=landlock,lockdown,yama,integrity,apparmor,bpf```
 
