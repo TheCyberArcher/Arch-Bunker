@@ -12,10 +12,10 @@
 > As I explained to you, after an installation of archlinux, even with the desktop you want, you have almost nothing as a security measure. The distribution, like others, tries to be close to the KISS philosophy and the original concepts of UNIX. So you will not have any preconfiguration, but the guide from arch will guide you to do the steps that I will list below.
 
 - Choose a secure password
-- Apply the latest security updates and shecule a vulnerability check
-- Encrypt your drive with luks (If you don't want to encrypt everything, at least encrypt your data disks)
-- Disable automount for data luks drives
-- Add sudo for your user account and limit the root usage
+- Apply the latest security updates and shecule a [vulnerability check](https://archlinux.org/packages/extra/x86_64/arch-audit/)
+- Encrypt your drive with [LUKS](https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system) (If you don't want to encrypt everything, at least encrypt your data disks)
+- Disable [automount](https://wiki.archlinux.org/title/Fstab) for data luks drives
+- Add [sudo](https://wiki.archlinux.org/title/Sudo) for your user account and limit the root usage
 
 <br />
 
