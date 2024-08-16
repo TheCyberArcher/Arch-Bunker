@@ -38,7 +38,7 @@ Personnaly, i use just the [Zen-Kernel](https://archlinux.org/packages/extra/x86
 
 I much prefer firewalld and we will base it on that case :)
 
-```yay -S firewalld```
-```systemctl enable firewalld```
-```systemctl start firewalld```
-```firewall-cmd --set-default-zone=block```
+```yay -S firewalld```\
+```systemctl enable firewalld```\
+```systemctl start firewalld```\
+```firewall-cmd --set-default-zone=block```\
