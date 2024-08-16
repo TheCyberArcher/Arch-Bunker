@@ -99,3 +99,5 @@ Add the AppArmor support to enforce the security :
 Edit this configuration file and uncomment the "apparmor" line: ```/etc/firejail/firejail.config```
 
 Check the application sandboxing : ```firejail --list```
+
+## Step 5 : Enhance Flatpak application security
