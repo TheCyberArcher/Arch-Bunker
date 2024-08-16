@@ -44,3 +44,9 @@ Personnaly, i use just the [Zen-Kernel](https://archlinux.org/packages/extra/x86
 ```firewall-cmd --set-default-zone=block``` (set the default zone to block)
 
 > With these elements, you already have a fairly significant limitation of network flows. The firewalld preconfiguration is very correct, you can improve it by adding rules if necessary.
+
+## Step 3: Enable Apparmor to protect your system
+
+> [AppArmor](https://www.apparmor.net/) use a "Mandatory Access Control" to prevent external or internal threats and zero-day attacks. [Ubuntu](https://ubuntu.com/server/docs/apparmor) has made the choice to implement this security measure for a long time and [Debian](https://wiki.debian.org/AppArmor/HowToUse) has also followed suit. I think it is a good thing to add this layer of security. Thanks to AppArmor, a binary/process will only be limited to what it really needs and will normally not access critical/unnecessary resources.
+
+> Easier to administer than SE Linux, there remains the problem that AppArmor needs a specific profile per binary. A community project ([apparmor.d](https://github.com/roddhjav/apparmor.d)) has been created to add all the common profiles and reinforce them with a few commands.
