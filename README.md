@@ -66,4 +66,17 @@ Reboot your computer and try if apparmor is running :
 
 ```aa-status``` 
 
+Install the package [apparmor.d-git](https://aur.archlinux.org/packages/apparmor.d-git) for the desktop hardening :
+
+```yay -S apparmor.d-git```
+
 Note : Important: I advise you to install it without activating the hardening, first test a hardening of the applications step by step, if everything works well, we will apply the hardening.
+
+If you dont have bugs, enforce the configuration files : 
+
+```aa-enforce /etc/apparmor.d/*```
+
+Check the number of enforced configuration files with : 
+
+```aa-status | grep -i enforce```
+
