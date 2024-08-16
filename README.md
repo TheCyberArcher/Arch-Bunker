@@ -45,7 +45,11 @@ Personnaly, i use just the [Zen-Kernel](https://archlinux.org/packages/extra/x86
 
 > With these elements, you already have a fairly significant limitation of network flows. The firewalld preconfiguration is very correct, you can improve it by adding rules if necessary.
 
-## Step 3: Enable Apparmor to protect your system
+## Step 4 : Use custom network parameters with a VPN
+
+
+
+## Step 5: Enable Apparmor to protect your system
 
 > [AppArmor](https://www.apparmor.net/) use a "Mandatory Access Control" to prevent external or internal threats and zero-day attacks. [Ubuntu](https://ubuntu.com/server/docs/apparmor) has made the choice to implement this security measure for a long time and [Debian](https://wiki.debian.org/AppArmor/HowToUse) has also followed suit. I think it is a good thing to add this layer of security. Thanks to AppArmor, a binary/process will only be limited to what it really needs and will normally not access critical/unnecessary resources.
 
@@ -81,7 +85,7 @@ Check the number of enforced configuration files with :
 ```sudo aa-status | grep -i enforce```
 
 
-## Step 4: Application Sandboxing with Firejail
+## Step 6: Application Sandboxing with Firejail
 
 > [Firejail](https://github.com/netblue30/firejail) is a program that reduces the risk of security breaches by restricting the running environment of untrusted applications using Linux namespaces and seccomp-bpf. It allows a process and all its descendants to have their own private view of the globally shared kernel resources, such as the network stack, process table, mount table.
 
@@ -100,4 +104,4 @@ Edit this configuration file and uncomment the "apparmor" line: ```/etc/firejail
 
 Check the application sandboxing : ```firejail --list```
 
-## Step 5 : Enhance Flatpak application security
+## Step 7 : Enhance Flatpak application security
